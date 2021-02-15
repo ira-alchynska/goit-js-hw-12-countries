@@ -1,21 +1,16 @@
-{{#each this}}
-<h1 class="name">{{name}}</h1>
-<div class="container">
-	<div class="info list">
-		<p class="capital"><span class="highlight">Capital</span>: {{capital}}</p>
-		<p class="capital"><span class="highlight">Population</span>: {{population}}</p>
-		<p class="languages highlight"> <span>Languages:</span></p>
-		<ul class="list-language">
-			{{#each languages}}
-			<li class="item-language">{{this.name}}</li>
-			{{/each}}
-		</ul>
+<li class="list-info-country">
+	<h1 class="name">{{name}}</h1>
+	<div class="container">
+		<div class="info list">
+			<p class="capital"><span class="highlight">Capital: {{capital}}</span></p>
+			<p class="capital"><span class="highlight">Population: {{population}}</span></p>
+			<p class="languages highlight">Languages:</p>
+			<ul class="list-language">
+				{{#each languages}}
+				<li class="item-language">{{name}}</li>
+				{{/each}}
+			</ul>
+		</div>
+		<img src="{{flag}}" alt="flag" class="flag">
 	</div>
-	<img class="flag" src="{{flag}}" alt="flag">
-</div>
-{{/each}}
-
-/* function createItem(country) {
-const item = oneCountry(country);
-refs.cardContainer.insertAdjacentHTML('beforeEnd', item);
-} */
+</li>

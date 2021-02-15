@@ -1,5 +1,13 @@
 import refs from './refs';
+import oneCountry from '../templates/country.hbs';
 
+function createItem(country) {
+  const item = oneCountry(country);
+  refs.cardContainer.insertAdjacentHTML('beforeEnd', item);
+}
+
+export default createItem;
+/* 
 function createItem(country) {
   const item = `<li class="list-info-country">
       <h1 class="title">${country.name}</h1>
@@ -28,6 +36,4 @@ function createLanguageList(languageArray) {
     '',
   );
   return languages;
-}
-
-export default createItem;
+} */
