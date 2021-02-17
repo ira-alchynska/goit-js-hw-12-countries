@@ -7,7 +7,7 @@ import createTemplateList from './js/createTemplateList';
 import createItem from './js/createItem';
 import './styles.css';
 import { showNotificationToMany } from './js/notification';
-const debounserColectData = debounce(fetchCountries, 2000);
+const debounserColectData = debounce(fetchCountries, 500);
 refs.inputSearch.addEventListener('input', debounserColectData);
 
 function markup(arr) {

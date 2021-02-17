@@ -9,7 +9,12 @@ function fetchCountries(e) {
   fetch(`https://restcountries.eu/rest/v2/name/${inputData}`)
     .then(response => response.json())
     .then(rez => {
-      rez.status ? showNotificationFail() : chooseCase(rez);
+      if (rez.status) {
+        showNotificationFail();
+        clearPage();
+      } else {
+        chooseCase(rez);
+      }
     })
     .catch(error => {
       console.error(error);
