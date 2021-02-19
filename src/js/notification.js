@@ -1,17 +1,17 @@
-import { info, error, defaultModules } from '@pnotify/core';
+import { error, info, defaultModules } from '@pnotify/core/dist/PNotify.js';
+import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
 import '@pnotify/core/dist/PNotify.css';
-import * as PNotifyMobile from '@pnotify/mobile';
-import '@pnotify/mobile/dist/PNotifyMobile.css';
 import '@pnotify/core/dist/BrightTheme.css';
-defaultModules.set(PNotifyMobile, {});
 
 function showNotificationToMany() {
+  defaultModules.set(PNotifyMobile, {});
   info({
     text: 'Too many matches found. Please enter a more specific query!',
+    delay: 2000,
   });
 }
-
 function showNotificationFail() {
+  defaultModules.set(PNotifyMobile, {});
   error({
     title: 'STOP!',
     text: 'Enter correct country name!',
@@ -19,4 +19,4 @@ function showNotificationFail() {
   });
 }
 
-export { showNotificationToMany, showNotificationFail };
+export { showNotificationFail, showNotificationToMany };

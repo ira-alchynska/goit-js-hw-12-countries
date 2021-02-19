@@ -1,7 +1,6 @@
 const refs = {
-  cardContainer: document.querySelector('.js-container'),
-  formSearch: document.querySelector('.js-search-form'),
   inputSearch: document.querySelector('.js-input'),
+  listCountries: document.querySelector('.js-list'),
+  cardBlock: document.querySelector('.js-container'),
 };
-
 export default refs;

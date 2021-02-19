@@ -1,12 +1,12 @@
 import refs from './refs';
-import oneCountry from '../templates/country.hbs';
+import itemsTemplate from '../templates/card.hbs';
+import { clearPage } from './render';
 
-function createItem(country) {
-  const item = oneCountry(country);
-  refs.cardContainer.insertAdjacentHTML('beforeEnd', item);
+export default function createCardCountry(data) {
+  clearPage();
+  const markup = itemsTemplate(data);
+  refs.cardBlock.insertAdjacentHTML('beforeend', markup);
 }
-
-export default createItem;
 /* 
 function createItem(country) {
   const item = `<li class="list-info-country">

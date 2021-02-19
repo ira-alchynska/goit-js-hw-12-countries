@@ -45,6 +45,7 @@ body {
 }
 
 .container {
+  padding: 15px;
   display: flex;
   justify-content: space-around;
 }
@@ -64,9 +65,4 @@ body {
 .flag {
   width: 450px;
   height: 350px;
-}
-
-.js-container {
-  padding: 15px;
-  margin: 0;
 }
