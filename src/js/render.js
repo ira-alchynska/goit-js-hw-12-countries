@@ -4,10 +4,14 @@ import createCardCountry from './cardCountry';
 import refs from './refs';
 
 function renderPage(data) {
+  if (!data) {
+    retun;
+  }
   if (data.length > 10) {
     showNotificationToMany();
     clearPage();
-  } else if (data.length > 1 && data.length <= 10) {
+  }
+  if (data.length > 1 && data.length <= 10) {
     clearPage();
     createListCountries(data);
   } else {
